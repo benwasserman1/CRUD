@@ -120,7 +120,7 @@ while main_menu:
     elif initial_menu == "3":
 
         # update students
-        student_id = input("Enter the ID of the student to change: ")
+        student_id = input("Enter the ID of the student you would like to change: ")
         new_major = input("Major: ")
         new_advisor = input("Advisor: ")
 
