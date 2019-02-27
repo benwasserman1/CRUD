@@ -11,12 +11,24 @@
 
 class Student:
 
+    def __init__(self):
+        self = self
+
     def __init__(self, first_name, last_name, gpa, major, faculty_advisor):
         self.first_name = first_name
         self.last_name = last_name
         self.gpa = gpa
         self.major = major
         self.faculty_advisor = faculty_advisor
+
+    def input_student(self):
+        # create new students
+        first_name = input("First name: ")
+        last_name = input("Last name: ")
+        gpa = input("GPA: ")
+        major = input("Major: ")
+        faculty_advisor = input("Faculty Advisor: ")
+        return first_name, last_name, gpa, major, faculty_advisor
 
     def get_student_tuple(self):
         student_tuple = (self.first_name, self.last_name, self.gpa, self.major, self.faculty_advisor)
