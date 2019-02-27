@@ -50,9 +50,9 @@ class Menu:
         print("------ GPA Menu --------")
 
         gpa_menu = input("Return all students with a major "
-                         "\n1. Greater than " + GPA +
-                         "\n2. Less than " + GPA +
-                         "\n3. Equal to " + GPA + "\n")
+                         "\n1. Greater than " + str(GPA) +
+                         "\n2. Less than " + str(GPA) +
+                         "\n3. Equal to " + str(GPA) + "\n")
 
         return gpa_menu
 

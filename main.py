@@ -40,7 +40,7 @@ while main_menu:
 
         elif search == "3":
             try:
-                GPA = int(input("GPA: "))
+                GPA = float(input("GPA: "))
             except ValueError:
                 print("The input was invalid. Enter a number")
                 GPA = input("GPA: ")
@@ -76,6 +76,8 @@ while main_menu:
 
         conn.commit()
 
+        print("Record inserted")
+
     elif choice == "3":
 
         # update students
@@ -86,6 +88,7 @@ while main_menu:
         update_tuple = (new_major, new_advisor, student_id)
         c.execute('UPDATE Students SET Major = ?, FacultyAdvisor = ? WHERE StudentId = ?', update_tuple)
         conn.commit()
+        print("Record updated")
 
     elif choice == "4":
 
@@ -94,6 +97,7 @@ while main_menu:
         delete_tuple = (delete_id,)
         c.execute('DELETE FROM Students WHERE StudentId = ?', delete_tuple)
         conn.commit()
+        print("Record deleted")
 
     elif choice == "q":
         sys.exit()
