@@ -40,7 +40,7 @@ while main_menu:
 
         elif search == "3":
             try:
-                GPA = float(input("GPA: "))
+                GPA = int(input("GPA: "))
             except ValueError:
                 print("The input was invalid. Enter a number")
                 GPA = input("GPA: ")
